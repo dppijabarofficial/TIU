@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRYOUT Calon Paskibraka</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="logo-dppi_20251220_232237_0000.png" class="header">
+
+<div class="info">
+
+<h2>Data Peserta</h2>
+
+<input id="nama" placeholder="Nama Lengkap">
+<input id="sekolah" placeholder="Asal Sekolah">
+
+<select id="gender">
+<option value="">-- Pilih Jenis Kelamin --</option>
+<option value="Laki-Laki">Laki-Laki</option>
+<option value="Perempuan">Perempuan</option>
+</select>
+
+<input id="tinggibadan" placeholder="Tinggi Badan (CM)">
+<input id="beratbadan" placeholder="Berat Badan (KG)">
+
+<select id="kabkota">
+
+<option value="">-- Pilih Kabupaten / Kota --</option>
+
+<option value="Kota Palu">Kota Palu</option>
+
+<option value="Kabupaten Banggai">Kabupaten Banggai</option>
+<option value="Kabupaten Banggai Kepulauan">Kabupaten Banggai Kepulauan</option>
+<option value="Kabupaten Banggai Laut">Kabupaten Banggai Laut</option>
+<option value="Kabupaten Buol">Kabupaten Buol</option>
+<option value="Kabupaten Donggala">Kabupaten Donggala</option>
+<option value="Kabupaten Morowali">Kabupaten Morowali</option>
+<option value="Kabupaten Morowali Utara">Kabupaten Morowali Utara</option>
+<option value="Kabupaten Parigi Moutong">Kabupaten Parigi Moutong</option>
+<option value="Kabupaten Poso">Kabupaten Poso</option>
+<option value="Kabupaten Sigi">Kabupaten Sigi</option>
+<option value="Kabupaten Tolitoli">Kabupaten Tolitoli</option>
+<option value="Kabupaten Tojo Una-Una">Kabupaten Tojo Una-Una</option>
+
+</select>
+
+<button onclick="mulaiUjian()">Mulai Ujian</button>
+
+</div>
+
+<div class="timer hidden">
+<span id="time">10:00</span>
+</div>
+
+<div class="progress-box hidden">
+
+<div class="progress">
+<div id="progressBar"></div>
+</div>
+
+<small id="progressText">0 / 20</small>
+
+</div>
+
+<div id="navSoal" class="nav-soal hidden"></div>
+
+<form id="quizForm" class="hidden">
+
+<div id="soalContainer"></div>
+
+<div class="nav-btn">
+<button type="button" onclick="sebelumnya()">⬅ Kembali</button>
+
+<button type="button" id="nextBtn" onclick="berikutnya()">
+Berikutnya ➡
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

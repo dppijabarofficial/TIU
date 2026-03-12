@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Ujian</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #141e30, #243b55);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter", sans-serif;
+        color: white;
+      }
+
+      .result-card {
+        width: 100%;
+        max-width: 420px;
+        padding: 30px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        text-align: center;
+      }
+
+      .logo {
+        width: 80px;
+        margin-bottom: 15px;
+        border-radius: 50%;
+      }
+
+      h2 {
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 5px;
+      }
+
+      .sub {
+        font-size: 14px;
+        opacity: 0.8;
+        margin-bottom: 20px;
+      }
+
+      .data {
+        text-align: left;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      .data div {
+        margin-bottom: 6px;
+      }
+
+      .data span {
+        font-weight: 600;
+      }
+
+      .score-box {
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 18px;
+        background: linear-gradient(45deg, #00f5ff, #00ff88);
+        color: #002b36;
+      }
+
+      .score {
+        font-size: 48px;
+        font-weight: bold;
+      }
+
+      button {
+        padding: 12px 18px;
+        border: none;
+        border-radius: 12px;
+        background: #00f5ff;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .note {
+        font-size: 13px;
+        margin-top: 15px;
+        opacity: 0.8;
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 12px;
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="result-card">
+      <img
+        src="logo-dppi_20251220_232237_0000.png"
+        class="logo"
+        alt="Logo"
+      />
+
+      <h2>Hasil Ujian</h2>
+      <div class="sub">Simulasi Seleksi Paskibraka</div>
+
+      <!-- DATA PESERTA -->
+      <div class="data">
+        <div>Nama: <span id="n"></span></div>
+        <div>Gender: <span id="g"></span></div>
+        <div>Sekolah: <span id="s"></span></div>
+        <div>Provinsi: <span id="p"></span></div>
+        <div>Kab/Kota: <span id="d"></span></div>
+        <div>Tinggi Badan: <span id="tb"></span> cm</div>
+        <div>Berat Badan: <span id="bb"></span> kg</div>
+      </div>
+
+      <!-- NILAI -->
+      <div class="score-box">
+        <small>Nilai Akhir</small>
+        <div class="score" id="v">0</div>
+      </div>
+
+      <br />
+      <a href="review.html" target="_blank">
+        <button>Lihat Pembahasan</button>
+      </a>
+
+      <div class="note">
+        Terima kasih telah mengikuti ujian.<br />
+        Tetap junjung tinggi nilai Pancasila dan nasionalisme
+      </div>
+
+      <div class="footer">TRYOUT Paskibraka</div>
+    </div>
+
+    <script>
+      document.getElementById("n").textContent =
+        localStorage.getItem("nama") || "-";
+
+      document.getElementById("g").textContent =
+        localStorage.getItem("gender") || "-";
+
+      document.getElementById("s").textContent =
+        localStorage.getItem("sekolah") || "-";
+
+      document.getElementById("p").textContent =
+        localStorage.getItem("provinsi") || "-";
+
+      document.getElementById("d").textContent =
+        localStorage.getItem("kabkota") || "-";
+
+      document.getElementById("tb").textContent =
+        localStorage.getItem("tinggibadan") || "-";
+
+      document.getElementById("bb").textContent =
+        localStorage.getItem("beratbadan") || "-";
+
+      document.getElementById("v").textContent =
+        localStorage.getItem("nilai") || "0";
+    </script>
+  </body>
+</html>
